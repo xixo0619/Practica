@@ -32,3 +32,9 @@ $(document).ready(function(){
     });
   });
 })
+
+/*Funcion del modal*/
+
+function modalLoginModal() {
+    $("#loginModal").modal("show");
+  }

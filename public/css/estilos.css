@@ -153,7 +153,7 @@
     color: #40514e;
   }
   /*fin de la barra de navegacion*/
-  
+
   .slideanim {visibility:hidden;}
   .slide {
     animation-name: slide;
@@ -196,4 +196,16 @@
     .logo {
       font-size: 150px;
     }
+  }
+
+  #botonSend{
+    background-color:#30e3ca; 
+    color: #f5f5f5; 
+    width:130px
+
+  }
+
+  #botonSuscribe{
+    background-color:#30e3ca; 
+    width:130px
   }

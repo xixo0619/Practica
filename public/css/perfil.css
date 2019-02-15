@@ -60,7 +60,7 @@ body {
 }
 
 .nav-underline .nav-link:hover {
-  color: #007bff;
+  color: #217971;
 }
 
 .nav-underline .active {
@@ -75,3 +75,38 @@ body {
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
+
+.btn-primary{
+  background-color:#30e3ca; 
+  border-color: #30e3ca
+}
+
+.btn-secondary{
+  background-color: #40514e;
+  border-color: #40514e
+}
+
+.bg-dark{
+  background-color: #40514e !important;
+}
+
+input{
+  margin-bottom:15px; 
+  margin-top: 10px
+}
+/*
+button{
+  margin-bottom:15px; margin-top: 10px
+}*/
+
+#botonSalir{
+    margin: auto;
+    background-color:#30e3ca; 
+    border: #30e3ca; 
+    
+}
+
+#botonGo{
+    background-color:#30e3ca; 
+    border: #30e3ca; 
+}

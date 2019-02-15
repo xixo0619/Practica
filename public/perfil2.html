@@ -1,12 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-  <script src="main.js"></script>
+  <title>Perfil MC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/perfil.css">
 </head>
@@ -35,21 +32,109 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actualizaciones</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Cambiar Usuario</a>
-                <a class="dropdown-item" href="#">Cambiar Cuenta</a>
-                <a class="dropdown-item" href="#">Cambiar imagen</a>
-              </div>
-            </li>
-          </ul>
+              <div class="dropdown-menu" aria-labelledby="dropdown01" style="background-color:#40514e">
+                <a style="color:#30e3ca" class="dropdown-item" onclick="modalUsuario()" href="#">Cambiar Usuario</a>
+                <a style="color:#30e3ca" class="dropdown-item" onclick="modalCuenta()" href="#">Cambiar Cuenta</a>
+                <a style="color:#30e3ca" class="dropdown-item" onclick="modalImagen()" href="#">Cambiar imagen</a>
+              </div>   
+            </li>   
+          </ul>   
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit" style="background-color:#30e3ca; border-color: #30e3ca">Search</button>
+            <a href="index.html"  class="btn btn-primary" type="button" id="botonSalir">SIGN OUT</a>
+            <!--<button class="btn btn-primary my-2 my-sm-0" type="submit" style="background-color:#30e3ca; border-color: #30e3ca">SIGN OUT</button>-->
           </form>
         </div>
       </nav>
-      
+
+      <!--Modales Para las Actualizaciones-->
+
+      <!--Modal Para cambiar usuario-->
+      <div class="modal" tabindex="-1" role="dialog" id="modalUsuario" >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Actualizar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Aqui ira los campos necesarios para la actualizacion de datos</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"  onclick="modalSecundario()">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Modal Cuenta-->
+        <div class="modal" tabindex="-1" role="dialog" id="modalCuenta" >
+            <div class="modal-dialog  modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary"  >Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Modal Imagen-->
+          <div class="modal" tabindex="-1" role="dialog" id="modalImagen" >
+              <div class="modal-dialog  modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" >Save changes</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!--Modal Secundario-->
+          <div class="modal" tabindex="-1" role="dialog" id="modalSecundario" >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Prueba de un modal dentro de otro modal</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
       <!--contenedor de los links-->
+      <!--
       <div class="nav-scroller bg-white shadow-sm">
         <nav class="nav nav-underline">
           <a class="nav-link active" href="#">Dashboard</a>
@@ -66,38 +151,129 @@
           <a class="nav-link" href="#">Link</a>
         </nav>
       </div>
+      -->
+
+      <!--Contenedor del Perfil-->
+      <div class="container" style="background-color:darkcyan; margin-top: 80px;"  >
+        <div class="row col-xl-12" >
+         <!-- <div class="col-md-6" style="background-color:deeppink; margin-top: 13px; margin-bottom: 13px; margin-left: 5px">
+            <form>
+              <input placeholder="hola mundo" class="form-control" type="text">
+              <input placeholder="hola mundo" class="form-control" type="password">
+              <button type="button" class="btn btn-primary">Boton</button>
+            </form>
+
+          </div>
+
+          <div class="col-md-6" style="background-color:deepskyblue; margin-top: 13px; margin-bottom: 13px">
+              <form>
+                <input class="form-control"  placeholder="hola mundo" type="text">
+                <input  class="form-control" placeholder="hola mundo"  type="password">
+                <button type="button" class="btn btn-success">Boton</button>
+              </form>
+  
+          </div>-->
+          
+          <nav class="col-md-2 d-none d-md-block bg-green sidebar">
+            <div class="sidebar-sticky">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
+                    <h6 class="border-bottom border-gray pb-2 mb-0" style="color:#2F89FC">Recent updates</h6>
+                    <div class="media text-muted pt-3">
+                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                      </p>
+                    </div>
+                    <div class="media text-muted pt-3"> 
+                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                      </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                      
+                       
+                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                      </p>
+                    </div>
+                    <small class="d-block text-right mt-3">
+                      <a href="#">All updates</a>
+                    </small>
+                  </div>  
+
+            </div>
+          </nav>
+          <nav class="col-md-6 d-none d-md-block bg-dark">
+              <div class="">
+                  <div class="my-3 p-3 bg-white rounded shadow-sm">
+                      <h6 class="border-bottom border-gray pb-2 mb-0" style="color:#2F89FC">Recent updates</h6>
+                      <div class="media text-muted pt-3">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                          <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
+                          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        </p>
+                      </div>
+                      <div class="media text-muted pt-3"> 
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                          <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
+                          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        </p>
+                      </div>
+                      <div class="media text-muted pt-3">
+                        
+                         
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                          <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
+                          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        </p>
+                      </div>
+                      <small class="d-block text-right mt-3">
+                        <a href="#">All updates</a>
+                      </small>
+                    </div>  
+  
+              </div>
+            </nav>
+
+            <div class="card col-md-4" style="width: 18rem; margin-right: auto; margin-top: 15px">
+               <img src="img/odin.png" class="card-img-top">
+               <div class="card-body">
+                   <h5 class="card-title">Card title</h5>
+                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   <a href="#" class="btn btn-primary" id="botonGo">Go somewhere</a>
+               </div>
+            </div>
+
+        </div>
+      </div>
+        
+         
+
       
       <!--Inicio de los contenedores-->
       <main role="main" class="container">
-         
-        <!--Logo de Bootstrap
-        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-          <img class="mr-3" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
-          <div class="lh-100">
-            <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
-            <small>Since 2011</small>
-          </div>
-        </div>-->
       
         <!--Actualizaciones (recent updates)-->
         <div class="my-3 p-3 bg-white rounded shadow-sm">
           <h6 class="border-bottom border-gray pb-2 mb-0" style="color:#2F89FC">Recent updates</h6>
           <div class="media text-muted pt-3">
-            {% include icons/placeholder.svg width="32" height="32" background="#007bff" color="#007bff" class="mr-2 rounded" %}
+            <!--Insertar imagen-->
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             </p>
           </div>
           <div class="media text-muted pt-3">
-            {% include icons/placeholder.svg width="32" height="32" background="#e83e8c" color="#e83e8c" class="mr-2 rounded" %}
+            <!--Insertar imagen-->
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             </p>
           </div>
           <div class="media text-muted pt-3">
-            {% include icons/placeholder.svg width="32" height="32" background="#6f42c1" color="#6f42c1" class="mr-2 rounded" %}
+            <!--Insertar imagen-->
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <strong class="d-block text-gray-dark" style="color:#2F89FC">@username</strong>
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -106,7 +282,7 @@
           <small class="d-block text-right mt-3">
             <a href="#">All updates</a>
           </small>
-        </div>
+        </div>  
         <!--Fin de la seccion de Actualizaciones(recent updates)-->
 
 
@@ -114,7 +290,7 @@
         <div class="my-3 p-3 bg-white rounded shadow-sm">
           <h6 class="border-bottom border-gray pb-2 mb-0" style="color:#2F89FC">Suggestions</h6>
           <div class="media text-muted pt-3">
-            {% include icons/placeholder.svg width="32" height="32" background="#007bff" color="#007bff" class="mr-2 rounded" %}
+            <!--Insertar imagen-->
             <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <div class="d-flex justify-content-between align-items-center w-100">
                 <strong class="text-gray-dark" style="color:#2F89FC">Full Name</strong>
@@ -124,7 +300,7 @@
             </div>
           </div>
           <div class="media text-muted pt-3">
-            {% include icons/placeholder.svg width="32" height="32" background="#007bff" color="#007bff" class="mr-2 rounded" %}
+            <!--Insertar imagen-->
             <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <div class="d-flex justify-content-between align-items-center w-100">
                 <strong class="text-gray-dark" style="color:#2F89FC">Full Name</strong>
@@ -134,7 +310,7 @@
             </div>
           </div>
           <div class="media text-muted pt-3">
-             {% include icons/placeholder.svg width="32" height="32" background="#007bff" color="#007bff" class="mr-2 rounded" %}
+             <!--Insertar imagen-->
             <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <div class="d-flex justify-content-between align-items-center w-100">
                 <strong class="text-gray-dark" style="color:#2F89FC">Full Name</strong>

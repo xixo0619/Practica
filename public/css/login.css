@@ -17,3 +17,11 @@ body{
     margin-bottom: 10px;
 }
 
+#botonLogin{
+    margin: auto;
+    background-color:#30e3ca; 
+    border: #30e3ca; 
+    width: 126px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}

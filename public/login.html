@@ -5,67 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+  
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body style="background-color:rgb(49, 173, 142)">
+<body>
      
 
-  <div style="background-color:#f5f5f5;color:white;position:absolute;width:100%;height: 100%;left:0;top:0">
+  <div id="div1">
     <main>
-
         <form id="formulario">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <h1>Formulario de Login</h1>
+              <hr>
+              <h3><label for="exampleInputEmail1">Nombre de Usuario:</label></h3> 
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre de Usuario...">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+             <h3> <label for="exampleInputPassword1">Contraseña:</label></h3>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña...">
             </div>
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <a type="button" class="btn btn-primary" href="navbar.html" id="botonLogin">LOGIN</a>
-            <button id="boton" type="submit" class="btn btn-primary">Submit</button>
-          </form>
-      <!--<div id="formulario-login">
-          <h1>Sign In</h1>
-          <input class="form-control" type="text" placeholder="Email or phone number">
-          <input class="form-control" type="password" placeholder="Password">
-          <button type="button">Sign In</button>
-      </div>-->
+            <a class="btn btn-primary btn-lg" href="navbar.html" id="botonLogin">LOGIN</a>
+            <a class="btn btn-primary btn-lg" id="boton" onclick="modalRegistro()" >REGISTRARSE</a>
+            <h6>Poner botones para login social</h6>
+        </form>
   </main>
   </div>
-    <!--Ejemplo de boostrap
-    <div class="container">
-        <div class="row" id="contenedor">
-            <form id="formulario">
+
+  <!--Modal Registro-->
+  <div class="modal fade" tabindex="-1" role="dialog" id="modalRegistro">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="background-color:#a7abb1ec  ">
+        <div class="modal-header">
+          <h5 class="modal-title">Formulario de Registro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formularioRegistro">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <h1>Formulario de Registro</h1>
+              <hr>
+              <h3><label for="exampleInputEmail1">Nombre:</label></h3> 
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre...">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+             <h3> <label for="exampleInputPassword1">Apellido:</label></h3>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido...">
             </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <a type="button" class="btn btn-primary" href="navbar.html" id="botonLogin">LOGIN</a>
-            <button id="boton" type="submit" class="btn btn-primary">Submit</button>
-          </form>
+            <div class="form-group">
+              <h3> <label for="exampleInputPassword1">Nombre de Usuario:</label></h3>
+               <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre Usuario...">
+             </div>
+             <div class="form-group">
+              <h3> <label for="exampleInputPassword1">Correo:</label></h3>
+               <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo...">
+             </div>
+             <div class="form-group">
+              <h3> <label for="exampleInputPassword1">Contraseña:</label></h3>
+               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña...">
+             </div>
+        </form>
 
         </div>
-    </div>-->
-    
+        <div class="modal-footer">
+          <a class="btn btn-primary btn-lg" id="boton2" data-dismiss="modal">CLOSE</a>
+          <a class="btn btn-primary btn-lg" id="boton2" href="navbar.html">GUARDAR</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+     <script src="js/jquery-3.3.1.min.js" ></script>
+     <script src="js/bootstrap.min.js" ></script>
+     <script src="js/login.js"></script>
 
 </body>
 </html>

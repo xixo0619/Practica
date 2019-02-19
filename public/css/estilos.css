@@ -81,7 +81,7 @@
   .item span {
     font-style: normal;
   }
-
+ 
   /*Contenedor Pricing*/
   .panel {
     border: 1px solid #2F89FC; 
@@ -201,11 +201,20 @@
   #botonSend{
     background-color:#30e3ca; 
     color: #f5f5f5; 
-    width:130px
-
+    border-color: #30e3ca;
+    border-radius: 10px
   }
 
   #botonSuscribe{
     background-color:#30e3ca; 
-    width:130px
+    border-radius: 10px;
+    border-color: #30e3ca;
+    color:#f5f5f5
+  }
+
+  #botonGet{
+    background-color:#30e3ca; 
+    color:#f5f5f5;
+    border-radius: 10px;
+    border-color: #30e3ca
   }

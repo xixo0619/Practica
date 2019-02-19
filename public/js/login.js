@@ -1,4 +1,13 @@
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+function modalRegistro() {
+  $("#modalRegistro").modal("show");
+}
+
+
+
+
+
+
+/*$('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
     var $this = $(this),
         label = $this.prev('label');
@@ -40,4 +49,5 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     
     $(target).fadeIn(600);
     
-  });
+  });*/
+

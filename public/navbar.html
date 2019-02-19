@@ -8,7 +8,9 @@
   <link rel="stylesheet" type="text/css" media="screen" href="main.css">
   <script src="main.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  
   <link rel="stylesheet" href="css/navbar.css">
+  
 </head>
 <body>
   
@@ -32,16 +34,63 @@
               </li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <a href="index.html" class="btn btn-primary my-2 my-sm-0" style="background-color:#30e3ca; border-color: #30e3ca">SIGN OUT</a>
-              <!--<button class="btn btn-primary my-2 my-sm-0" type="button">SIGN OUT</button>-->
+              <a href="index.html" class="btn btn-primary my-2 my-sm-0" id="botonSalir">SIGN OUT</a>
+              
             </form>
           </div>
         </nav>
       </header>
       <!--Fin del Header-->
+      <!-- Container (Paneles para escirbir codigo) -->
+    <div id="contenedorTrabajo"class="container-fluid">
+        <div class="row slideanim">
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h4>HTML</h4>
+              </div>
+              <div class="panel-body">
+                  <textarea id="areaDesarrollo" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>                             
+              </div>
+              <div class="panel-footer">
+                <!--<button class="btn btn-lg">Sign Up</button>-->
+                <a href="" class="btn btn-lg">GUARDAR</a>
+              </div>
+            </div>      
+          </div>     
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h4>CSS</h4>
+              </div>
+              <div class="panel-body"> 
+                  <textarea id="areaDesarrollo" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+              </div>
+              <div class="panel-footer">
+                <!--<button class="btn btn-lg">Sign Up</button>-->
+                <a href="" class="btn btn-lg">GUARDAR</a>
+              </div>
+            </div>      
+          </div>       
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h4>JAVASCRIPT</h4>
+              </div>
+              <div class="panel-body">
+                  <textarea id="areaDesarrollo" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+              </div>
+              <div class="panel-footer">
+                <!--<button class="btn btn-lg">Sign Up</button>-->
+                <a href="" class="btn btn-lg">GUARDAR</a>
+              </div>
+            </div>      
+          </div>    
+        </div>
+      </div>
 
       <!--Principio de los Contenedores-->
+      <!--
       <div class="container" style="margin-top: 100px">
           <div class="row">
               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
@@ -74,15 +123,22 @@
               </div>
 
           </div>
-     </div> 
-  
+     </div> -->
+   
      <!--Contenedor donde se reflejara el resulatado del codigo-->
-     <div class="container" style="margin-top:50px">
+     <div class="container" style="margin-top:50px; margin-bottom:100px">
          <div class="row">
-             <div class="col-md-12">
-                 <div class="form-grup">
-                     <label for="exampleFormControlTextarea1">Mostrar Codigo</label>
+             <div class="col">
+                 <div class="panel panel-default text-center">
+                   <div class="panel-heading">
+                     <h4>RESULTADO DEL CODIGO</h4>
+                   </div>
+                   <div class="panel-body">
                      <textarea class="form-control" cols="25" rows="15" id="areaResultado"></textarea>
+                   </div>
+                   <div class="panel-footer">
+                    <button class="btn btn-lg"><small>HOLA MUNDO</small></button> 
+                   </div>  
                  </div>
              </div>
          </div>
@@ -90,6 +146,7 @@
 
 
       <!-- Begin page content -->
+      <!--
       <main role="main" class="flex-shrink-0">
         <div class="container">
           <h1 class="mt-5">Sticky footer with fixed navbar</h1>
@@ -102,7 +159,7 @@
         <div class="container">
           <span class="text-muted">Place sticky footer content here.</span>
         </div>
-      </footer>
+      </footer>-->
       
 
       <script src="js/bootstrap.min.js"></script>

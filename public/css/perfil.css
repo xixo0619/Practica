@@ -103,10 +103,12 @@ button{
     margin: auto;
     background-color:#30e3ca; 
     border: #30e3ca; 
+    border-radius: 10px
     
 }
 
 #botonGo{
     background-color:#30e3ca; 
     border: #30e3ca; 
+    border-radius: 10px
 }

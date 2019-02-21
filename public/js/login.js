@@ -3,51 +3,39 @@ function modalRegistro() {
 }
 
 
+$('#boton-guardar').click(function () {
+  data = `nombre=${$('#txt-nombre').val()}&apellido=${$('#txt-apellido').val()}&usuario=${$('#txt-usuario').val()}&correo=${$('#txt-correo').val()}&contrasena=${$('#txt-contrasena').val()}`
+  // alert(data);
+$.ajax({
+  url: "/crear-usuario",
+      data: data,
+      method:"POST",
+  dataType: "json",
+  success: function (response) {
+          console.log(response);
+          alert('Usuario insertado sastifactoriamente');
+  }
+ });
+});
 
-
-
-
-/*$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+$('#boton-login').click(function() {
+  data = `usuario=${$('#txt-usuario').val()}&contrasena=${$('#txt-contrasena').val()}`;
+	$.ajax({
+        url:"/login",
+        data: data,
+        method:"POST",
+        dataType:"json",
+        success:function(response){
+			console.log(response);
+            if (response.estatus == 0 ){
+                // alert("Credenciales correctas");    
+                window.location.href ="home.html";
+			}
+            else
+                alert("Credenciales incorrectas");
+            console.log(response);
+        }
   
-    var $this = $(this),
-        label = $this.prev('label');
-  
-        if (e.type === 'keyup') {
-              if ($this.val() === '') {
-            label.removeClass('active highlight');
-          } else {
-            label.addClass('active highlight');
-          }
-      } else if (e.type === 'blur') {
-          if( $this.val() === '' ) {
-              label.removeClass('active highlight'); 
-              } else {
-              label.removeClass('highlight');   
-              }   
-      } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-              label.removeClass('highlight'); 
-              } 
-        else if( $this.val() !== '' ) {
-              label.addClass('highlight');
-              }
-      }
-  
-  });
-  
-  $('.tab a').on('click', function (e) {
-    
-    e.preventDefault();
-    
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-    
-    target = $(this).attr('href');
-  
-    $('.tab-content > div').not(target).hide();
-    
-    $(target).fadeIn(600);
-    
-  });*/
+    });
+});
 

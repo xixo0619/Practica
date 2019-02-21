@@ -38,3 +38,5 @@ $(document).ready(function(){
 function modalLoginModal() {
     $("#loginModal").modal("show");
   }
+
+

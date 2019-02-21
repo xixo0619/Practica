@@ -23,3 +23,17 @@ function modalImagen() {
 function modalSecundario(){
   $("#modalSecundario").modal("show");
 }
+
+
+function cerrarSesion() {
+	$.ajax({
+		url:"/logout",
+		method: "POST",
+		dataType: "json",
+		success: function (response) {
+			if(response.isSession)
+				console.log('sesion cerrada');
+			window.location.href ="index.html";
+		}
+	}); 
+}

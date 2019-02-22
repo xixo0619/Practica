@@ -97,3 +97,14 @@ label{
   border-color: #30e3ca;
   border-radius: 10px
 }
+
+.btn-primary{
+  background-color:#30e3ca; 
+  border-color: #30e3ca
+}
+
+#labelModal{
+  margin-bottom: 0px;
+  color:#000000;
+  background-color: #ffffff
+}

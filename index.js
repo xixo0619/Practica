@@ -19,7 +19,9 @@ app.use(cookieParser());
 
 app.use(express.static("public")); //Publicar un directorio de archivos estaticos
 
-//Rutas para registrar usuarios
+
+//Enrutadores de la pagina
+//Ruta para registrar usuarios
 app.post("/crear-usuario", function (request, response) {
     var conexion = mysql.createConnection(credenciales);
     var sql = 'INSERT INTO usuario(nombre,apellido,nombre_usuario, correo, contrasena) VALUES (?,?,?,?,SHA1(?))';
@@ -34,6 +36,24 @@ app.post("/crear-usuario", function (request, response) {
     );
 });
  
+
+//Ruta para agregar archivo
+app.post("/agregar-archivo",function (req,res) {
+    var conexion = mysql.createConnection(credenciales);
+    var sql = "INSERT INTO archivo(nombre_archivo) values (?)";
+    conexion.query(
+        sql,
+        [request.nombre_archivo],
+        function (err,result) {
+            if(err) throw err;
+            response.send(result);
+            
+        }
+    );
+    
+});
+
+//Ruta para hacer login
 app.post("/login", function (req,res) {
     var conexion = mysql.createConnection(credenciales);
     var sql = "SELECT id_usuario, correo, nombre_usuario  FROM usuario WHERE nombre_usuario=? and contrasena=?;";
@@ -55,6 +75,7 @@ app.post("/login", function (req,res) {
     );    
 });
 
+//Ruta para hacer logout
 app.post("/logout", function (request, response) {
     request.session.destroy();
     response.send({isSession: false});    

@@ -1,7 +1,7 @@
 function modalRegistro() {
   $("#modalRegistro").modal("show");
 }
-
+ 
 
 $('#boton-guardar').click(function () {
   data = `nombre=${$('#txt-nombre').val()}&apellido=${$('#txt-apellido').val()}&usuario=${$('#txt-usuario').val()}&correo=${$('#txt-correo').val()}&contrasena=${$('#txt-contrasena').val()}`
